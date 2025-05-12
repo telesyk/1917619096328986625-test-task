@@ -7,8 +7,13 @@
     "start": "parcel",
     "build": "parcel build"
   },
-  "dependencies": {},
   "devDependencies": {
-    "parcel": "^2.14.0"
-  }
+    "@eslint/js": "^9.26.0",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.5",
+    "globals": "^16.1.0",
+    "parcel": "^2.14.0",
+    "prettier": "^3.5.3"
+  },
+  "packageManager": "yarn@4.9.1"
 }

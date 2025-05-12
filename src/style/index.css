@@ -1,0 +1,26 @@
+@import url('normalize.css');
+
+:root {
+  /* GLOBAL */
+  --color-primary: #000000;
+  --color-primary-selected: #323232;
+  --color-primary-alternative: #a8a8a8;
+  --color-secondary: #ddecf9;
+  --color-secondary-selected: #acbcc6;
+  --color-secondary-alternative: #f3f9ff;
+  --color-action: #7dc6fc;
+  --color-action-selected: #042b47;
+  /* FONT */
+  --font-family: 'Inter', sans-serif;
+  --font-size: 14px;
+  --font-size-small: 12px;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  /* VALUES */
+  --padding-default: 20px;
+  --page-width-max: 1920px;
+  /* SCROLLBAR */
+}
