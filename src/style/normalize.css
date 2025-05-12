@@ -362,7 +362,7 @@ template {
    ========================================================================== */
 
 html {
-  color-scheme: light dark;
+  /* color-scheme: light dark; */
   font-family: 'Inter', sans-serif, system-ui;
   font-optical-sizing: auto;
   font-weight: var(--font-weight-normal);

@@ -1,0 +1,4 @@
+:root {
+  --header-width: var(--page-width-max);
+  --header-height: 44px;
+}

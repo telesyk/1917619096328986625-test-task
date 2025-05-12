@@ -12,8 +12,184 @@
 </head>
 
 <body>
-  <h1>Parcel Vanilla App</h1>
-  <p>Edit <code>src/index.html</code> to get started!</p>
+  <div class="page">
+    <header class="page-header">
+      <nav class="page-header__container">
+        <div class="page-header__title">DebtX</div>
+        <ul class="page-header__navigation">
+          <li class="page-header__navigation-item">
+            <a href="#" class="page-header__navigation-link">File</a>
+          </li>
+          <li class="page-header__navigation-item">
+            <a href="#" class="page-header__navigation-link">Load set</a>
+          </li>
+          <li class="page-header__navigation-item">
+            <a href="#" class="page-header__navigation-link">Import Client Data</a>
+          </li>
+        </ul>
+        <div class="page-header__details">
+          User: Connecticut Housing Finance Authority | Katherine Ketteringham
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <div class="page-main__container">
+        <!-- TABLE DETAILS -->
+        <div class="table-details">
+          <div class="table-details__header">
+            <h1 class="table-details__title">Connecticut Housing Finance Authority</h1>
+            <p class="table-details__subtitle">Client</p>
+          </div>
+          <div class="table-details__content">
+            <div class="table-details__content-item">
+              <h2 class="table-details__content-title">Valuation Date</h2>
+              <p class="table-details__content-text">08-30-2023</p>
+            </div>
+            <div class="table-details__content-item">
+              <h2 class="table-details__content-title">Effective Date</h2>
+              <p class="table-details__content-text">2025-01-16</p>
+            </div>
+            <div class="table-details__content-item">
+              <h2 class="table-details__content-title">Execution Date</h2>
+              <p class="table-details__content-text">2025-01-16</p>
+            </div>
+            <div class="table-details__content-item">
+              <h2 class="table-details__content-title">Status</h2>
+              <p class="table-details__content-text">Report Archived</p>
+            </div>
+          </div>
+        </div>
+        <!-- END TABLE DETAILS -->
+        <!-- TABS -->
+        <div class="tabs" data-tabs>
+          <!-- TABS PANEL -->
+          <div class="tabs__panel" role="tabpanel">
+            <!-- TABS NAV PANEL -->
+            <nav class="tabs__navigation" role="tablist">
+              <button class="tabs__navigation-item" role="tab" data-tab-control="tab1">Text</button>
+              <button class="tabs__navigation-item" role="tab" data-tab-control="tab2">Text</button>
+              <button class="tabs__navigation-item" role="tab" data-tab-control="tab3">Text</button>
+              <button class="tabs__navigation-item" role="tab" data-tab-control="tab4">Text</button>
+              <button class="tabs__navigation-item" role="tab" data-tab-control="tab5">Text</button>
+              <button class="tabs__navigation-item" role="tab" data-tab-control="tab6">Text</button>
+              <button class="tabs__navigation-item" role="tab" data-tab-control="tab7">Text</button>
+              <button class="tabs__navigation-item" role="tab" data-tab-control="tab8">Text</button>
+            </nav>
+            <!-- END TABS NAV PANEL -->
+            <!-- TABS SEARCH -->
+            <div class="tabs__search">
+              <label for="tabsSearch" class="tabs__search-label">
+                <button class="tabs__search-button">
+                  <span class="visually-hidden" hidden>Search</span>
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACNUlEQVR4nO2YzWoUQRDHfxlwyNlEMB51j+IHJu9gfAejuQhBkaCvIHhKvOlJDwFx4wP4ddBNvOailxziNSroQQ+CutFIQQ0URdBNtmtmR/oHzTLL9r+qe6qqqxcymUymzUwAl4DHwAawDfzQT3leBeb0dyNFR53bAXYHGH2gq/MapQSWgZ8DOu6HzFtSndo5Aqw7h34BL4FF4Bwwpc5N6bN8/0p/Z+etAZN1O//OOfEEODXg/NPAMzd/q65FHNJdtPF8/YBaV1z4va4jnJZdDM8OqTerm1BpSk6EcVzLYmVsIZHuNbcpHYJYdTGfkudGW0pscibMq5YqcjaxvhSAqjrtRCT0ZbNDUiojWDM2LkaGj9TzCG4YG2IvKRtGXA6lCGaMjc3U4u+N+FFiOGZsfE0tbstn1GFTunKalG0jLr1N9Bv4GJkD08TnwJs2VqGbxsbD1OJzRlyauQh6xsZ89EksLXFKpDT/Ngkckmdds0NPE2u/MNorBNFx/fvVRLqL7n5xkkCWnLELQ+qdd/eBWwRTuqarr/38QXfeOv8JGKemO/GWu9NKP39mHwlrY96O+0BBDUy6N1FVp552lTN6spb6Oa11vmeqTTU+N7WIUnPC9kn7GX2N+XF1ereJRQgngEcunv/1h9aKqzbibKOLEA7rTaqr/fwXDasPwFttD+b/ckgVo7CIYRkD7rpFPGjjIu7lRYwAY//Dmyj2SOw7tIzCLeIbLaTQnf8O3G7amUwmk2FP/gDxZx8kD3+mqwAAAABJRU5ErkJggg=="
+                    alt="search--v1">
+                </button>
+                <input type="search" id="tabsSearch" class="tabs__search-control" placeholder="Search..." />
+              </label>
+            </div>
+            <!-- END TABS SEARCH -->
+          </div>
+          <!-- END TABS PANEL -->
+          <!-- TABS CONTENT -->
+          <div class="tabs__content" data-tabs-content>
+            <div class="tab-item is-active" data-tab="tab1">
+              <!-- TABLES -->
+              <table>
+                <thead>
+                  <tr>
+                    <td>Text</td>
+                    <td>Batch</td>
+                    <td>
+                      <span>Report</span>
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
+                        alt="sorting-answers">
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
+                        alt="key">
+                    </td>
+                    <td>Provider</td>
+                    <td>Deal Number</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>text</td>
+                    <td>text</td>
+                    <td>text</td>
+                    <td>text</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>text</td>
+                    <td>text</td>
+                    <td>text</td>
+                    <td>text</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>text</td>
+                    <td>text</td>
+                    <td>text</td>
+                    <td>text</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tab-item" data-tab="tab2">
+              <h3>Tab 2</h3>
+              <p>This is the content of Tab 2.</p>
+            </div>
+            <div class="tab-item" data-tab="tab3">
+              <h3>Tab 3</h3>
+              <p>This is the content of Tab 3.</p>
+            </div>
+          </div>
+          <!-- END TABS CONTENT -->
+        </div>
+        <!-- END TABS -->
+        <!-- TABLE UPDATES CONTROL -->
+        <div class="tabel-updates-control">
+          <div class="table-updates-control__list">
+            <div class="table-updates-control__item">
+              <label for="checkbox1" class="table-updates-control__label">
+                <span class="table-updates-control__text">Batch All</span>
+                <input type="checkbox" checked id="checkbox1" class="table-updates-control__checkbox">
+              </label>
+            </div>
+            <div class="table-updates-control__item">
+              <label for="checkbox2" class="table-updates-control__label">
+                <span class="table-updates-control__text">Report All</span>
+                <input type="checkbox" id="checkbox2" class="table-updates-control__checkbox">
+              </label>
+            </div>
+            <div class="table-updates-control__item">
+              <label for="checkbox3" class="table-updates-control__label">
+                <span class="table-updates-control__text">Update All</span>
+                <input type="checkbox" id="checkbox3" class="table-updates-control__checkbox">
+              </label>
+            </div>
+            <div class="table-updates-control__item">
+              <label for="checkbox4" class="table-updates-control__label">
+                <span class="table-updates-control__text">Enable Update</span>
+                <input type="checkbox" id="checkbox4" class="table-updates-control__checkbox">
+              </label>
+            </div>
+          </div>
+          <button class="table-updates-control__export button-action">Export FM</button>
+        </div>
+        <!-- END TABLE UPDATES CONTROL -->
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__container">
+        <p>&copy; 2023 Parcel Vanilla App</p>
+      </div>
+    </footer>
+  </div>
 
   <script src="./js/index.js" type="module"></script>
 </body>
