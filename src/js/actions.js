@@ -20,6 +20,12 @@ export const onClick = event => {
     case 'trigger-table-filter':
       console.log('trigger-table-filter')
       return
+    case 'trigger-export-fm':
+      console.log('trigger-export-fm')
+      return
+    case 'trigger-search':
+      console.log('trigger-search')
+      return
     default:
       return
   }

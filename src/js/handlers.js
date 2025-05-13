@@ -16,9 +16,29 @@ export const handleTableRowToggle = target => {
 }
 
 export const handleTableUpdatesToggle = target => {
-  console.log(target, 'handleTableUpdatesToggle')
+  console.log(target.type, 'handleTableUpdatesToggle')
 }
 
 export const handleTabSwitch = target => {
-  console.log(target, 'handleTabSwitch')
+  if (target.ariaSelected === 'true') return
+
+  const siblings = target.parentElement.children
+  const nextTab = document.getElementById(target.getAttribute('aria-controls'))
+  const nextTabSiblings = document.querySelectorAll('[role=tabpanel]')
+
+  for (let element of siblings) {
+    element.setAttribute('tabindex', '-1')
+    element.setAttribute('aria-selected', 'false')
+    element.classList.remove('is-active')
+  }
+
+  for (const element of nextTabSiblings) {
+    element.classList.remove('is-active')
+  }
+
+  target.setAttribute('tabindex', '0')
+  target.classList.add('is-active')
+  target.setAttribute('aria-selected', 'true')
+  // console.log(nextTabId, 'handleTabSwitch')
+  nextTab.classList.add('is-active')
 }

@@ -1,23 +1,25 @@
 :root {
-  /* Tabs Panel */
-  --tabs-panel-height: 40px;
-  --tabs-panel-shadow-color: rgba(221, 236, 249, 0.5);
-  --tabs-panel-shadow: 0 0 8px var(--tabs-panel-shadow-color);
+  /* Tabs Nav-Panel */
+  --tabs-nav-panel-height: 40px;
+  --tabs-nav-panel-shadow-color: rgba(221, 236, 249, 0.5);
+  --tabs-nav-panel-shadow: 0 0 8px var(--tabs-nav-panel-shadow-color);
   /* Tabs Navigation */
   --tabs-navigation-gap: 11px;
   --tabs-navigation-item-background-color: transparent;
   --tabs-navigation-item-color: var(--color-primary);
   --tabs-navigation-item-text-shadow: 0 0 0 transparent;
+  /* Tab */
+  --tab-state: none;
 }
 
-/* Tabs Panel */
-.tabs__panel {
+/* Tabs Nav Panel */
+.tabs__nav-panel {
   margin: var(--padding-default) calc(var(--padding-default) * -1) 14px;
   padding: 0 var(--padding-default) 0 calc(var(--padding-default) / 2);
   display: flex;
   justify-content: space-between;
-  height: var(--tabs-panel-height);
-  box-shadow: var(--tabs-panel-shadow);
+  height: var(--tabs-nav-panel-height);
+  box-shadow: var(--tabs-nav-panel-shadow);
 }
 
 /* Tabs Navigation */
@@ -47,8 +49,14 @@
   }
 }
 
-/* Tabs Content */
-.tabs__content {
+/* Tab */
+.tab {
   margin: 0 calc(var(--padding-default) * -1);
   overflow: auto;
+  /* by default tab hidden */
+  display: var(--tab-state);
+
+  &.is-active {
+    --tab-state: block;
+  }
 }

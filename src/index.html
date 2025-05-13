@@ -82,35 +82,33 @@
         <!-- END TABLE DETAILS -->
         <!-- TABS -->
         <div class="tabs" data-tabs>
-          <!-- TABS PANEL -->
-          <div class="tabs__panel" role="tabpanel">
-            <!-- TABS NAV PANEL -->
+          <!-- TABS NAV-PANEL -->
+          <div class="tabs__nav-panel">
+            <!-- TABS NAVIGATION -->
             <nav class="tabs__navigation" role="tablist">
-              <button data-control="switch-tab" class="tabs__navigation-item is-active" role="tab"
-                data-tab-control="tab1">Portfolio
-                Summary</button>
-              <button data-control="switch-tab" class="tabs__navigation-item" role="tab" data-tab-control="tab2">DXCDA
-                Price</button>
-              <button data-control="switch-tab" class="tabs__navigation-item" role="tab" data-tab-control="tab3">DXCDA
-                Price Results</button>
-              <button data-control="switch-tab" class="tabs__navigation-item" role="tab" data-tab-control="tab4">DXMark
-                Price</button>
-              <button data-control="switch-tab" class="tabs__navigation-item" role="tab" data-tab-control="tab5">DXMark
-                Price Results</button>
-              <button data-control="switch-tab" class="tabs__navigation-item" role="tab" data-tab-control="tab6">DXMark
-                Individual Loan
-                Overrides</button>
-              <button data-control="switch-tab" class="tabs__navigation-item" role="tab"
-                data-tab-control="tab7">Schedule</button>
-              <button data-control="switch-tab" class="tabs__navigation-item" role="tab"
-                data-tab-control="tab8">Portfolio Dashboard</button>
+              <button id="tab-1" data-control="switch-tab" class="tabs__navigation-item is-active" role="tab"
+                tabindex="0" aria-selected="true" aria-controls="tabPanel-1">Portfolio Summary
+              </button>
+              <button id="tab-2" data-control="switch-tab" class="tabs__navigation-item" role="tab" tabindex="-1"
+                aria-selected="false" aria-controls="tabPanel-2">
+                DXCDA Price
+              </button>
+              <button id="tab-3" data-control="switch-tab" class="tabs__navigation-item" role="tab" tabindex="-1"
+                aria-selected="false" aria-controls="tabPanel-3">
+                DXCDA Price Results
+              </button>
+              <button class="tabs__navigation-item" role="tab">DXMark Price</button>
+              <button class="tabs__navigation-item" role="tab">DXMark Price Results</button>
+              <button class="tabs__navigation-item" role="tab">DXMark Individual Loan Overrides</button>
+              <button class="tabs__navigation-item" role="tab">Schedule</button>
+              <button class="tabs__navigation-item" role="tab">Portfolio Dashboard</button>
             </nav>
-            <!-- END TABS NAV PANEL -->
+            <!-- END TABS NAVIGATION -->
             <!-- TABS SEARCH -->
             <div class="tabs__search search">
               <span class="search__label">Asset Reference:</span>
               <label for="tabsSearch" class="search__wrapper" role="searchbox">
-                <button class="search__button">
+                <button data-control="trigger-search" class="search__button">
                   <span class="visually-hidden" hidden>Search</span>
                   <img
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACNUlEQVR4nO2YzWoUQRDHfxlwyNlEMB51j+IHJu9gfAejuQhBkaCvIHhKvOlJDwFx4wP4ddBNvOailxziNSroQQ+CutFIQQ0URdBNtmtmR/oHzTLL9r+qe6qqqxcymUymzUwAl4DHwAawDfzQT3leBeb0dyNFR53bAXYHGH2gq/MapQSWgZ8DOu6HzFtSndo5Aqw7h34BL4FF4Bwwpc5N6bN8/0p/Z+etAZN1O//OOfEEODXg/NPAMzd/q65FHNJdtPF8/YBaV1z4va4jnJZdDM8OqTerm1BpSk6EcVzLYmVsIZHuNbcpHYJYdTGfkudGW0pscibMq5YqcjaxvhSAqjrtRCT0ZbNDUiojWDM2LkaGj9TzCG4YG2IvKRtGXA6lCGaMjc3U4u+N+FFiOGZsfE0tbstn1GFTunKalG0jLr1N9Bv4GJkD08TnwJs2VqGbxsbD1OJzRlyauQh6xsZ89EksLXFKpDT/Ngkckmdds0NPE2u/MNorBNFx/fvVRLqL7n5xkkCWnLELQ+qdd/eBWwRTuqarr/38QXfeOv8JGKemO/GWu9NKP39mHwlrY96O+0BBDUy6N1FVp552lTN6spb6Oa11vmeqTTU+N7WIUnPC9kn7GX2N+XF1ereJRQgngEcunv/1h9aKqzbibKOLEA7rTaqr/fwXDasPwFttD+b/ckgVo7CIYRkD7rpFPGjjIu7lRYwAY//Dmyj2SOw7tIzCLeIbLaTQnf8O3G7amUwmk2FP/gDxZx8kD3+mqwAAAABJRU5ErkJggg=="
@@ -121,1030 +119,1148 @@
             </div>
             <!-- END TABS SEARCH -->
           </div>
-          <!-- END TABS PANEL -->
-          <!-- TABS CONTENT -->
-          <div class="tabs__content" data-tabs-content>
-            <div class="tab-item is-active" data-tab="tab1">
-              <!-- TABLES -->
-              <table class="table">
-                <!-- TABLE HEADING -->
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <th>&nbsp;</th>
-                  <!-- COLUMN BUTCH -->
-                  <th>
-                    <span>Batch</span>
-                  </th>
-                  <!-- COLUMN REPORT -->
-                  <th>
-                    <span>Report</span>
-                  </th>
-                  <!-- COLUMN PROVIDER -->
-                  <th>
-                    <div class="table__flexbox">
-                      <span>Provider</span>
-                      <button class="table__trigger" data-control="trigger-table-filter">
-                        <img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
-                          alt="sorting-answers" width="16" height="16">
-                      </button>
-                      <button class="table__trigger" data-control="trigger-table-filter">
-                        <img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
-                          alt="key" width="16" height="16">
-                      </button>
-                    </div>
-                  </th>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <th>
-                    <div class="table__flexbox">
-                      <span>Deal Number</span>
-                      <button class="table__trigger" data-control="trigger-table-filter">
-                        <img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
-                          alt="sorting-answers" width="16" height="16">
-                      </button>
-                      <button class="table__trigger" data-control="trigger-table-filter">
-                        <img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
-                          alt="key" width="16" height="16">
-                      </button>
-                    </div>
-                  </th>
-                  <!-- COLUMN MEMBER NAME -->
-                  <th>
-                    <div class="table__flexbox">
-                      <span>Member Name</span>
-                      <button class="table__trigger" data-control="trigger-table-filter">
-                        <img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
-                          alt="sorting-answers" width="16" height="16">
-                      </button>
-                      <button class="table__trigger" data-control="trigger-table-filter">
-                        <img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
-                          alt="key" width="16" height="16">
-                      </button>
-                    </div>
-                  </th>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <th>
-                    <div class="table__flexbox">
-                      <span>Member Number</span>
-                      <button class="table__trigger" data-control="trigger-table-filter">
-                        <img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
-                          alt="sorting-answers" width="16" height="16">
-                      </button>
-                      <button class="table__trigger" data-control="trigger-table-filter">
-                        <img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
-                          alt="key" width="16" height="16">
-                      </button>
-                    </div>
-                  </th>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <th>
-                    <div class="table__flexbox">
-                      <span>Asset Reference</span>
-                      <button class="table__trigger" data-control="trigger-table-filter">
-                        <img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
-                          alt="sorting-answers" width="16" height="16">
-                      </button>
-                      <button class="table__trigger" data-control="trigger-table-filter">
-                        <img
-                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
-                          alt="key" width="16" height="16">
-                      </button>
-                    </div>
-                  </th>
-                  <!-- COLUMN ASSET NAME -->
-                  <th>
-                    <span>Asset Name</span>
-                  </th>
-                  <!-- COLUMN BORROWER NAME -->
-                  <th>
-                    <span>Borrower Name</span>
-                  </th>
-                  <!-- COLUMN AS OF DATE -->
-                  <th>
-                    <span>As Of Date</span>
-                  </th>
-                  <!-- COLUMN CITY -->
-                  <th>
-                    <span>City</span>
-                  </th>
-                  <!-- COLUMN STATE -->
-                  <th>
-                    <span>State</span>
-                  </th>
-                  <!-- COLUMN POSTAL CODE -->
-                  <th>
-                    <span>Postal Code</span>
-                  </th>
-                  <!-- COLUMN COUNTRY -->
-                  <th>
-                    <span>Country</span>
-                  </th>
-                  <!-- COLUMN REGION -->
-                  <th>
-                    <span>Region</span>
-                  </th>
-                </tr>
-                <tr class="is-active">
-                  <!-- COLUMN ORDER -->
-                  <td>1</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-1" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" checked type="checkbox" id="t-checkbox1-1"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>2</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-2" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-2"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>3</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-3" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-3"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>4</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-4" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-4"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>5</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-5" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-5"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>6</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-6" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-6"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>7</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-7" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-7"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>8</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-8" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-8"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>9</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-9" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-9"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>10</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-10" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-10"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>11</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-11" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-11"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>12</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-12" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-12"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>13</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-13" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-13"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>14</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-14" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-14"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>15</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-15" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-15"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>16</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-16" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-16"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>17</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-17" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-17"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>18</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-18" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-18"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>19</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-19" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-19"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <tr>
-                  <!-- COLUMN ORDER -->
-                  <td>20</td>
-                  <!-- COLUMN BUTCH -->
-                  <td>
-                    <label for="t-checkbox1-20" class="table-updates-control__label checkbox">
-                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-20"
-                        class="checkbox__control">
-                    </label>
-                  </td>
-                  <!-- COLUMN REPORT -->
-                  <td>
-                    <div class="table__flexbox no-gap">
-                      <a href="#" class="table__link">Model</a>
-                      <a href="#" class="table__link">Cashflow</a>
-                    </div>
-                  </td>
-                  <!-- COLUMN PROVIDER -->
-                  <td>Connecticut Housing Finance Authority</td>
-                  <!-- COLUMN DEAL NUMBER -->
-                  <td>000325</td>
-                  <!-- COLUMN MEMBER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN MEMBER NUMBER -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN ASSET REFERENCE -->
-                  <td>180525270</td>
-                  <!-- COLUMN ASSET NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN BORROWER NAME -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN AS OF DATE -->
-                  <td>08/31/2023</td>
-                  <!-- COLUMN CITY -->
-                  <td>SAN FERNANDO</td>
-                  <!-- COLUMN STATE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN POSTAL CODE -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN COUNTRY -->
-                  <td>&nbsp;</td>
-                  <!-- COLUMN REGION -->
-                  <td>&nbsp;</td>
-                </tr>
-                <!-- END TABLE BODY -->
-              </table>
-            </div>
-            <div class="tab-item" data-tab="tab2">
-              <h3>Tab 2</h3>
-              <p>This is the content of Tab 2.</p>
-            </div>
-            <div class="tab-item" data-tab="tab3">
-              <h3>Tab 3</h3>
-              <p>This is the content of Tab 3.</p>
-            </div>
+          <!-- END TABS NAV-PANEL -->
+          <!-- TABS-PANELS -->
+          <div class="tab is-active" id="tabPanel-1" role="tabpanel" aria-labelledby="tab-1">
+            <!-- TABLES -->
+            <table class="table">
+              <!-- TABLE HEADING -->
+              <tr>
+                <!-- COLUMN ORDER -->
+                <th>&nbsp;</th>
+                <!-- COLUMN BUTCH -->
+                <th>
+                  <span>Batch</span>
+                </th>
+                <!-- COLUMN REPORT -->
+                <th>
+                  <span>Report</span>
+                </th>
+                <!-- COLUMN PROVIDER -->
+                <th>
+                  <div class="table__flexbox">
+                    <span>Provider</span>
+                    <button class="table__trigger" data-control="trigger-table-filter">
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
+                        alt="sorting-answers" width="16" height="16">
+                    </button>
+                    <button class="table__trigger" data-control="trigger-table-filter">
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
+                        alt="key" width="16" height="16">
+                    </button>
+                  </div>
+                </th>
+                <!-- COLUMN DEAL NUMBER -->
+                <th>
+                  <div class="table__flexbox">
+                    <span>Deal Number</span>
+                    <button class="table__trigger" data-control="trigger-table-filter">
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
+                        alt="sorting-answers" width="16" height="16">
+                    </button>
+                    <button class="table__trigger" data-control="trigger-table-filter">
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
+                        alt="key" width="16" height="16">
+                    </button>
+                  </div>
+                </th>
+                <!-- COLUMN MEMBER NAME -->
+                <th>
+                  <div class="table__flexbox">
+                    <span>Member Name</span>
+                    <button class="table__trigger" data-control="trigger-table-filter">
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
+                        alt="sorting-answers" width="16" height="16">
+                    </button>
+                    <button class="table__trigger" data-control="trigger-table-filter">
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
+                        alt="key" width="16" height="16">
+                    </button>
+                  </div>
+                </th>
+                <!-- COLUMN MEMBER NUMBER -->
+                <th>
+                  <div class="table__flexbox">
+                    <span>Member Number</span>
+                    <button class="table__trigger" data-control="trigger-table-filter">
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
+                        alt="sorting-answers" width="16" height="16">
+                    </button>
+                    <button class="table__trigger" data-control="trigger-table-filter">
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
+                        alt="key" width="16" height="16">
+                    </button>
+                  </div>
+                </th>
+                <!-- COLUMN ASSET REFERENCE -->
+                <th>
+                  <div class="table__flexbox">
+                    <span>Asset Reference</span>
+                    <button class="table__trigger" data-control="trigger-table-filter">
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
+                        alt="sorting-answers" width="16" height="16">
+                    </button>
+                    <button class="table__trigger" data-control="trigger-table-filter">
+                      <img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
+                        alt="key" width="16" height="16">
+                    </button>
+                  </div>
+                </th>
+                <!-- COLUMN ASSET NAME -->
+                <th>
+                  <span>Asset Name</span>
+                </th>
+                <!-- COLUMN BORROWER NAME -->
+                <th>
+                  <span>Borrower Name</span>
+                </th>
+                <!-- COLUMN AS OF DATE -->
+                <th>
+                  <span>As Of Date</span>
+                </th>
+                <!-- COLUMN CITY -->
+                <th>
+                  <span>City</span>
+                </th>
+                <!-- COLUMN STATE -->
+                <th>
+                  <span>State</span>
+                </th>
+                <!-- COLUMN POSTAL CODE -->
+                <th>
+                  <span>Postal Code</span>
+                </th>
+                <!-- COLUMN COUNTRY -->
+                <th>
+                  <span>Country</span>
+                </th>
+                <!-- COLUMN REGION -->
+                <th>
+                  <span>Region</span>
+                </th>
+                <!-- COLUMN TEST -->
+                <th>Column test</th>
+                <!-- COLUMN TEST -->
+                <th>Column test</th>
+                <!-- COLUMN TEST -->
+                <th>Column test</th>
+              </tr>
+              <!-- END TABLE HEADING -->
+              <!-- TABLE BODY -->
+              <tr class="is-active">
+                <!-- COLUMN ORDER -->
+                <td>1</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-1" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" checked type="checkbox" id="t-checkbox1-1"
+                      class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>2</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-2" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-2" class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>3</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-3" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-3" class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>4</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-4" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-4" class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>5</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-5" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-5" class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>6</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-6" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-6" class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>7</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-7" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-7" class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>8</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-8" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-8" class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>9</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-9" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-9" class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>10</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-10" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-10"
+                      class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>11</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-11" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-11"
+                      class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>12</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-12" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-12"
+                      class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>13</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-13" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-13"
+                      class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>14</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-14" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-14"
+                      class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>15</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-15" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-15"
+                      class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>16</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-16" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-16"
+                      class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>17</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-17" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-17"
+                      class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>18</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-18" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-18"
+                      class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>19</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-19" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-19"
+                      class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <tr>
+                <!-- COLUMN ORDER -->
+                <td>20</td>
+                <!-- COLUMN BUTCH -->
+                <td>
+                  <label for="t-checkbox1-20" class="table-updates-control__label checkbox">
+                    <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-20"
+                      class="checkbox__control">
+                  </label>
+                </td>
+                <!-- COLUMN REPORT -->
+                <td>
+                  <div class="table__flexbox no-gap">
+                    <a href="#" class="table__link">Model</a>
+                    <a href="#" class="table__link">Cashflow</a>
+                  </div>
+                </td>
+                <!-- COLUMN PROVIDER -->
+                <td>Connecticut Housing Finance Authority</td>
+                <!-- COLUMN DEAL NUMBER -->
+                <td>000325</td>
+                <!-- COLUMN MEMBER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN MEMBER NUMBER -->
+                <td>&nbsp;</td>
+                <!-- COLUMN ASSET REFERENCE -->
+                <td>180525270</td>
+                <!-- COLUMN ASSET NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN BORROWER NAME -->
+                <td>&nbsp;</td>
+                <!-- COLUMN AS OF DATE -->
+                <td>08/31/2023</td>
+                <!-- COLUMN CITY -->
+                <td>SAN FERNANDO</td>
+                <!-- COLUMN STATE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN POSTAL CODE -->
+                <td>&nbsp;</td>
+                <!-- COLUMN COUNTRY -->
+                <td>&nbsp;</td>
+                <!-- COLUMN REGION -->
+                <td>&nbsp;</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+                <!-- COLUMN TEST -->
+                <td>Column test</td>
+              </tr>
+              <!-- END TABLE BODY -->
+            </table>
           </div>
-          <!-- END TABS CONTENT -->
+          <div class="tab" id="tabPanel-2" role="tabpanel" aria-labelledby="tab-2">
+            <h3>Tab 2</h3>
+            <p>This is the content of Tab 2.</p>
+          </div>
+          <div class="tab" id="tabPanel-3" role="tabpanel" aria-labelledby="tab-3">
+            <h3>Tab 3</h3>
+            <p>This is the content of Tab 3.</p>
+          </div>
+          <!-- END TABS-PANELS -->
         </div>
         <!-- END TABS -->
         <!-- TABLE UPDATES CONTROL -->
@@ -1176,7 +1292,8 @@
               </label>
             </div>
           </div>
-          <button class="table-updates-control__export button button--action">Export FM</button>
+          <button data-control="trigger-export-fm" class="table-updates-control__export button button--action">Export
+            FM</button>
         </div>
         <!-- END TABLE UPDATES CONTROL -->
     </main>

@@ -360,7 +360,6 @@ template {
    ========================================================================== */
 
 html {
-  /* color-scheme: light dark; */
   font-optical-sizing: auto;
   font-weight: var(--font-weight-normal);
   font-size: var(--font-size);
