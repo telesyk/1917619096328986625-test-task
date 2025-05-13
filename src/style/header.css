@@ -1,4 +1,83 @@
 :root {
   --header-width: var(--page-width-max);
   --header-height: 44px;
+  --header-title-width: 100px;
+  /* Navigation */
+  --navigation-height: 44px;
+  --navigation-gap: 12px;
+  --navigation-item-gap: calc(var(--navigation-gap) / 2);
+  --navigation-item-font-weight: var(--font-weight-medium);
+  --navigation-item-color: var(--color-primary-selected);
+  --navigation-item-text-shadow: 0 0 0 var(--navigation-item-color);
+  --navigation-item-border-width: 1px;
+  --navigation-item-border-color: transparent;
+  --navigation-item-border-style: solid;
+}
+
+/* Page Header */
+.page-header__container {
+  display: flex;
+  align-items: center;
+  max-width: var(--header-width);
+  height: var(--header-height);
+  padding: 0 var(--padding-default);
+  margin: 0 auto;
+}
+
+.page-header__title,
+.page-header__navigation,
+.page-header__details {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__title {
+  min-width: var(--header-title-width);
+  flex-basis: var(--header-title-width);
+}
+
+.page-header__details {
+  justify-content: flex-end;
+  gap: 5px;
+  flex: 1 0 auto;
+}
+
+.page-header__navigation {
+  flex: 2 1 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation */
+.navigation {
+  height: var(--navigation-height);
+  display: flex;
+  align-items: center;
+  gap: var(--navigation-gap);
+}
+
+.navigation__link {
+  display: block;
+  padding: 10px var(--navigation-item-gap);
+  text-decoration: none;
+  color: var(--navigation-item-color);
+  font-size: var(--font-size);
+  font-weight: var(--navigation-item-font-weight);
+  border-bottom: var(--navigation-item-border-width)
+    var(--navigation-item-border-style) var(--navigation-item-border-color);
+  text-shadow: var(
+    --navigation-item-text-shadow
+  ); /* Trick to avooid text "jumping" on hover */
+
+  &:hover {
+    --navigation-item-color: var(--color-primary);
+    --navigation-item-text-shadow: 0 0 0.5px var(--color-primary);
+  }
+
+  &.is-active {
+    --navigation-item-color: var(--color-primary);
+    --navigation-item-border-color: var(--color-primary);
+    --navigation-item-text-shadow: 0 0 0.5px var(--color-primary);
+  }
 }
