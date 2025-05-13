@@ -1,0 +1,81 @@
+:root {
+  /* Table Details */
+  --table-details-gap: calc(var(--padding-default) / 2);
+  --table-details-title-size: var(--font-size-large);
+  --table-details-title-weight: var(--font-weight-bold);
+  --table-details-title-color: var(--color-primary);
+  --table-details-subtitle-size: var(--font-size-small);
+  --table-details-subtitle-weight: var(--font-weight-medium);
+  --table-details-subtitle-color: #666666;
+  /* Table Details Content */
+  --table-details-content-gap: calc(var(--padding-default) * 2);
+  --table-details-content-gap-y: var(--padding-default);
+  --table-details-content-title-size: var(--table-details-subtitle-size);
+  --table-details-content-title-weight: var(--table-details-subtitle-weight);
+  --table-details-content-title-color: var(--table-details-subtitle-color);
+  --table-details-content-subtitle-weight: var(--font-weight-semibold);
+  --table-details-content-subtitle-color: var(--table-details-title-color);
+}
+
+/* Table */
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Table Details */
+.table-details {
+  margin: var(--table-details-gap) 0 0;
+  padding: 0 var(--padding-default) 0 126px;
+}
+
+.table-details__header {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.table-details__title {
+  /* h1 */
+  margin: 0;
+  font-size: var(--table-details-title-size);
+  font-weight: var(--table-details-title-weight);
+  color: var(--table-details-title-color);
+}
+
+.table-details__subtitle {
+  margin: 0;
+  padding-bottom: 2px;
+  font-size: var(--table-details-subtitle-size);
+  font-weight: var(--table-details-subtitle-weight);
+  color: var(--table-details-subtitle-color);
+}
+
+.table-details__content {
+  display: flex;
+  margin: 22px 0 var(--table-details-content-gap-y);
+  gap: var(--table-details-content-gap);
+}
+
+.table-details__content-item {
+}
+
+.table-details__content-title {
+  /* h2 */
+  margin: 0 0 5px;
+  font-size: var(--table-details-content-title-size);
+  font-weight: var(--table-details-content-title-weight);
+  color: var(--table-details-content-title-color);
+}
+
+.table-details__content-text {
+  margin: 0;
+  font-weight: var(--table-details-content-subtitle-weight);
+  color: var(--table-details-content-subtitle-color);
+}
+
+/* Table Updates Control */
+.tabel-updates-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

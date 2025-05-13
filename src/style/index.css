@@ -1,5 +1,6 @@
 @import url('normalize.css');
 @import url('header.css');
+@import url('table.css');
 
 :root {
   /* GLOBAL */
@@ -15,6 +16,7 @@
   --font-family: 'Inter', sans-serif;
   --font-size: 14px;
   --font-size-small: 12px;
+  --font-size-large: 18px;
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;

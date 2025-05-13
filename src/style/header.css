@@ -68,7 +68,7 @@
     var(--navigation-item-border-style) var(--navigation-item-border-color);
   text-shadow: var(
     --navigation-item-text-shadow
-  ); /* Trick to avooid text "jumping" on hover */
+  ); /* Trick to avoid text "jumping" on hover */
 
   &:hover {
     --navigation-item-color: var(--color-primary);
