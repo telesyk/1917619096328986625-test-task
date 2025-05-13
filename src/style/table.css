@@ -57,7 +57,7 @@
     transition: background-color var(--transition-duration) ease;
 
     &:not(:first-child):hover,
-    &:not(:first-child).is-active {
+    &.is-active {
       --table-row-background-color: var(--color-secondary-passive);
     }
   }

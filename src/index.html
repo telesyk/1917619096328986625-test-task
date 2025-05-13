@@ -86,16 +86,24 @@
           <div class="tabs__panel" role="tabpanel">
             <!-- TABS NAV PANEL -->
             <nav class="tabs__navigation" role="tablist">
-              <button class="tabs__navigation-item is-active" role="tab" data-tab-control="tab1">Portfolio
+              <button data-control="switch-tab" class="tabs__navigation-item is-active" role="tab"
+                data-tab-control="tab1">Portfolio
                 Summary</button>
-              <button class="tabs__navigation-item" role="tab" data-tab-control="tab2">DXCDA Price</button>
-              <button class="tabs__navigation-item" role="tab" data-tab-control="tab3">DXCDA Price Results</button>
-              <button class="tabs__navigation-item" role="tab" data-tab-control="tab4">DXMark Price</button>
-              <button class="tabs__navigation-item" role="tab" data-tab-control="tab5">DXMark Price Results</button>
-              <button class="tabs__navigation-item" role="tab" data-tab-control="tab6">DXMark Individual Loan
+              <button data-control="switch-tab" class="tabs__navigation-item" role="tab" data-tab-control="tab2">DXCDA
+                Price</button>
+              <button data-control="switch-tab" class="tabs__navigation-item" role="tab" data-tab-control="tab3">DXCDA
+                Price Results</button>
+              <button data-control="switch-tab" class="tabs__navigation-item" role="tab" data-tab-control="tab4">DXMark
+                Price</button>
+              <button data-control="switch-tab" class="tabs__navigation-item" role="tab" data-tab-control="tab5">DXMark
+                Price Results</button>
+              <button data-control="switch-tab" class="tabs__navigation-item" role="tab" data-tab-control="tab6">DXMark
+                Individual Loan
                 Overrides</button>
-              <button class="tabs__navigation-item" role="tab" data-tab-control="tab7">Schedule</button>
-              <button class="tabs__navigation-item" role="tab" data-tab-control="tab8">Portfolio Dashboard</button>
+              <button data-control="switch-tab" class="tabs__navigation-item" role="tab"
+                data-tab-control="tab7">Schedule</button>
+              <button data-control="switch-tab" class="tabs__navigation-item" role="tab"
+                data-tab-control="tab8">Portfolio Dashboard</button>
             </nav>
             <!-- END TABS NAV PANEL -->
             <!-- TABS SEARCH -->
@@ -108,7 +116,7 @@
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACNUlEQVR4nO2YzWoUQRDHfxlwyNlEMB51j+IHJu9gfAejuQhBkaCvIHhKvOlJDwFx4wP4ddBNvOailxziNSroQQ+CutFIQQ0URdBNtmtmR/oHzTLL9r+qe6qqqxcymUymzUwAl4DHwAawDfzQT3leBeb0dyNFR53bAXYHGH2gq/MapQSWgZ8DOu6HzFtSndo5Aqw7h34BL4FF4Bwwpc5N6bN8/0p/Z+etAZN1O//OOfEEODXg/NPAMzd/q65FHNJdtPF8/YBaV1z4va4jnJZdDM8OqTerm1BpSk6EcVzLYmVsIZHuNbcpHYJYdTGfkudGW0pscibMq5YqcjaxvhSAqjrtRCT0ZbNDUiojWDM2LkaGj9TzCG4YG2IvKRtGXA6lCGaMjc3U4u+N+FFiOGZsfE0tbstn1GFTunKalG0jLr1N9Bv4GJkD08TnwJs2VqGbxsbD1OJzRlyauQh6xsZ89EksLXFKpDT/Ngkckmdds0NPE2u/MNorBNFx/fvVRLqL7n5xkkCWnLELQ+qdd/eBWwRTuqarr/38QXfeOv8JGKemO/GWu9NKP39mHwlrY96O+0BBDUy6N1FVp552lTN6spb6Oa11vmeqTTU+N7WIUnPC9kn7GX2N+XF1ereJRQgngEcunv/1h9aKqzbibKOLEA7rTaqr/fwXDasPwFttD+b/ckgVo7CIYRkD7rpFPGjjIu7lRYwAY//Dmyj2SOw7tIzCLeIbLaTQnf8O3G7amUwmk2FP/gDxZx8kD3+mqwAAAABJRU5ErkJggg=="
                     alt="search--v1">
                 </button>
-                <input type="search" id="tabsSearch" class="search__control" />
+                <input data-control="toggle-search-focus" type="search" id="tabsSearch" class="search__control" />
               </label>
             </div>
             <!-- END TABS SEARCH -->
@@ -135,12 +143,12 @@
                   <th>
                     <div class="table__flexbox">
                       <span>Provider</span>
-                      <button class="table__trigger" data-trigger="trigger-name">
+                      <button class="table__trigger" data-control="trigger-table-filter">
                         <img
                           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
                           alt="sorting-answers" width="16" height="16">
                       </button>
-                      <button class="table__trigger" data-trigger="trigger-name">
+                      <button class="table__trigger" data-control="trigger-table-filter">
                         <img
                           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
                           alt="key" width="16" height="16">
@@ -151,12 +159,12 @@
                   <th>
                     <div class="table__flexbox">
                       <span>Deal Number</span>
-                      <button class="table__trigger" data-trigger="trigger-name">
+                      <button class="table__trigger" data-control="trigger-table-filter">
                         <img
                           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
                           alt="sorting-answers" width="16" height="16">
                       </button>
-                      <button class="table__trigger" data-trigger="trigger-name">
+                      <button class="table__trigger" data-control="trigger-table-filter">
                         <img
                           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
                           alt="key" width="16" height="16">
@@ -167,12 +175,12 @@
                   <th>
                     <div class="table__flexbox">
                       <span>Member Name</span>
-                      <button class="table__trigger" data-trigger="trigger-name">
+                      <button class="table__trigger" data-control="trigger-table-filter">
                         <img
                           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
                           alt="sorting-answers" width="16" height="16">
                       </button>
-                      <button class="table__trigger" data-trigger="trigger-name">
+                      <button class="table__trigger" data-control="trigger-table-filter">
                         <img
                           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
                           alt="key" width="16" height="16">
@@ -183,12 +191,12 @@
                   <th>
                     <div class="table__flexbox">
                       <span>Member Number</span>
-                      <button class="table__trigger" data-trigger="trigger-name">
+                      <button class="table__trigger" data-control="trigger-table-filter">
                         <img
                           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
                           alt="sorting-answers" width="16" height="16">
                       </button>
-                      <button class="table__trigger" data-trigger="trigger-name">
+                      <button class="table__trigger" data-control="trigger-table-filter">
                         <img
                           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
                           alt="key" width="16" height="16">
@@ -199,12 +207,12 @@
                   <th>
                     <div class="table__flexbox">
                       <span>Asset Reference</span>
-                      <button class="table__trigger" data-trigger="trigger-name">
+                      <button class="table__trigger" data-control="trigger-table-filter">
                         <img
                           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGNgGAWjYCDAfzphBrpZNAoGP/hPr0j/P5q6RgEM0K1I+T9ado2C4QkAKPp3ibYBCjsAAAAASUVORK5CYII="
                           alt="sorting-answers" width="16" height="16">
                       </button>
-                      <button class="table__trigger" data-trigger="trigger-name">
+                      <button class="table__trigger" data-control="trigger-table-filter">
                         <img
                           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACLUlEQVR4nO2YvU4bQRDHf0SAEgVLFKlShY9gyny9BSWJRMQzUEAMvAAY01hJKFKljIQckdTEpqZIjwM15gGAAkckhxatpdFq5Tvfx95aup+0he92Z/6znpnbOygoKCiIQBnYBFpAG7jWow00gQ1gDg95AxwBQcTRAl7jAaPAHvB/APGBHmrNJ20jFyYtu94F9oElnU6P9SgD7/W9rrGmqW05ZcwivgFMRVg7DXy3BOH0n9gTzm+B1Rg21vTanp2POOIF8E84jiO+xwejJpwUdstIm6QcCHu/yJiyUbBhOT8O7AIXQAeo6WuSGaOwn2eo//4h1XOkOkoYNUv7rFnmNcT9dTKkKRypthhGxxJAxzJv2VUanQlHszEDOA9JzT9kyKVwVIqZQjuWeSVxX/nIjGvh6FGE+eM6iE6fInYaQFs4Uk/UtCi7SKEHwLFwtJii7WVh95CMxH81cnkhRfsNYbeCA/Hq90hK9meNB1mU7pZYvLqeFj+ySh+1w18yFr8ubKsD4qth2vmKcZyu5yn+CfAOeBrB/oyRNr3jw2ieO/9bnFC/AW+BZ8BDYAKY161SvYn9tYifzDttBn2hD3TO19Pa+aQFO6j4JvASjwpWrl0BfgKn+ux0BZzoFlnxoc9XLZ9G5HDK5xg730/8jSPdVjFJC1bZ2sIxgRhxCjZ3ghhihiqAqk8FayNMjFcFGycArwo2aQBeEgwwvKQbUbwX+W5jO0IQ3uR7QUEBw8sdLWh7pGxxaIAAAAAASUVORK5CYII="
                           alt="key" width="16" height="16">
@@ -244,15 +252,14 @@
                     <span>Region</span>
                   </th>
                 </tr>
-                <!-- END TABLE HEADING -->
-                <!-- TABLE BODY -->
                 <tr class="is-active">
                   <!-- COLUMN ORDER -->
                   <td>1</td>
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-1" class="table-updates-control__label checkbox">
-                      <input checked type="checkbox" id="t-checkbox1-1" class="checkbox__control">
+                      <input data-control="toggle-table-row" checked type="checkbox" id="t-checkbox1-1"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -295,7 +302,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-2" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-2" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-2"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -338,7 +346,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-3" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-3" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-3"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -381,7 +390,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-4" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-4" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-4"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -424,7 +434,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-5" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-5" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-5"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -467,7 +478,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-6" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-6" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-6"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -510,7 +522,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-7" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-7" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-7"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -553,7 +566,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-8" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-8" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-8"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -596,7 +610,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-9" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-9" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-9"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -639,7 +654,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-10" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-10" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-10"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -682,7 +698,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-11" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-11" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-11"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -725,7 +742,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-12" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-12" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-12"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -768,7 +786,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-13" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-13" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-13"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -811,7 +830,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-14" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-14" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-14"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -854,7 +874,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-15" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-15" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-15"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -897,7 +918,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-16" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-16" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-16"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -940,7 +962,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-17" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-17" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-17"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -983,7 +1006,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-18" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-18" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-18"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -1026,7 +1050,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-19" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-19" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-19"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -1069,7 +1094,8 @@
                   <!-- COLUMN BUTCH -->
                   <td>
                     <label for="t-checkbox1-20" class="table-updates-control__label checkbox">
-                      <input type="checkbox" id="t-checkbox1-20" class="checkbox__control">
+                      <input data-control="toggle-table-row" type="checkbox" id="t-checkbox1-20"
+                        class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -1126,25 +1152,26 @@
           <div class="table-updates-control__list">
             <div class="table-updates-control__item">
               <label for="checkbox1" class="table-updates-control__label checkbox">
-                <input type="checkbox" checked id="checkbox1" class="checkbox__control">
+                <input data-control="toggle-table-updates" type="checkbox" checked id="checkbox1"
+                  class="checkbox__control">
                 <span class="checkbox__label">Batch All</span>
               </label>
             </div>
             <div class="table-updates-control__item">
               <label for="checkbox2" class="table-updates-control__label checkbox">
-                <input type="checkbox" id="checkbox2" class="checkbox__control">
+                <input data-control="toggle-table-updates" type="checkbox" id="checkbox2" class="checkbox__control">
                 <span class="checkbox__label">Report All</span>
               </label>
             </div>
             <div class="table-updates-control__item">
               <label for="checkbox3" class="table-updates-control__label checkbox">
-                <input type="checkbox" id="checkbox3" class="checkbox__control">
+                <input data-control="toggle-table-updates" type="checkbox" id="checkbox3" class="checkbox__control">
                 <span class="checkbox__label">Update All</span>
               </label>
             </div>
             <div class="table-updates-control__item">
               <label for="checkbox4" class="table-updates-control__label checkbox">
-                <input type="checkbox" id="checkbox4" class="checkbox__control">
+                <input data-control="toggle-table-updates" type="checkbox" id="checkbox4" class="checkbox__control">
                 <span class="checkbox__label">Enable Update</span>
               </label>
             </div>
