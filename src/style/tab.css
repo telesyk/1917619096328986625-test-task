@@ -1,6 +1,8 @@
 :root {
   /* Tabs Panel */
   --tabs-panel-height: 40px;
+  --tabs-panel-shadow-color: rgba(221, 236, 249, 0.5);
+  --tabs-panel-shadow: 0 0 8px var(--tabs-panel-shadow-color);
   /* Tabs Navigation */
   --tabs-navigation-gap: 11px;
   --tabs-navigation-item-background-color: transparent;
@@ -8,21 +10,19 @@
   --tabs-navigation-item-text-shadow: 0 0 0 transparent;
 }
 
-.tabs {
-}
-
 /* Tabs Panel */
 .tabs__panel {
+  margin: var(--padding-default) calc(var(--padding-default) * -1) 14px;
+  padding: 0 var(--padding-default) 0 calc(var(--padding-default) / 2);
   display: flex;
   justify-content: space-between;
   height: var(--tabs-panel-height);
-  margin: var(--padding-default) 0 14px;
+  box-shadow: var(--tabs-panel-shadow);
 }
 
 /* Tabs Navigation */
 .tabs__navigation {
   display: flex;
-  margin-left: calc(var(--padding-default) / 2 * -1);
 }
 
 .tabs__navigation-item {
@@ -50,4 +50,5 @@
 /* Tabs Content */
 .tabs__content {
   margin: 0 calc(var(--padding-default) * -1);
+  overflow: auto;
 }

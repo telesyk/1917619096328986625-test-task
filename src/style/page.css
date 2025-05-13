@@ -4,6 +4,13 @@
   --header-title-width: 100px;
 }
 
+/* Page */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 /* Header */
 .page-header__container {
   display: flex;
@@ -40,6 +47,10 @@
 }
 
 /* Main */
+.page-main {
+  flex: auto;
+}
+
 .page-main__container {
   padding: 0 var(--padding-default);
   margin: 0 auto;

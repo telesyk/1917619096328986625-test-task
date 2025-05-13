@@ -3,7 +3,7 @@
   --navigation-gap: 12px;
   --navigation-item-gap: calc(var(--navigation-gap) / 2);
   --navigation-item-font-weight: var(--font-weight-medium);
-  --navigation-item-color: var(--color-primary-selected);
+  --navigation-item-color: var(--color-primary-active);
   --navigation-item-text-shadow: 0 0 0 var(--navigation-item-color);
   --navigation-item-border-width: 1px;
   --navigation-item-border-color: transparent;

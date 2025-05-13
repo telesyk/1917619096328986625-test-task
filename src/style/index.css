@@ -8,16 +8,18 @@
 
 :root {
   /* GLOBAL */
+  --color-white: #ffffff;
   --color-primary: #000000;
-  --color-primary-selected: #323232;
-  --color-primary-alternative: #a8a8a8;
+  --color-primary-active: #323232;
+  --color-primary-passive: #a8a8a8;
   --color-secondary: #ddecf9;
-  --color-secondary-selected: #acbcc6;
-  --color-secondary-alternative: #f3f9ff;
+  --color-secondary-active: #acbcc6;
+  --color-secondary-passive: #f3f9ff;
   --color-action: #7dc6fc;
-  --color-action-selected: #042b47;
+  --color-action-active: #042b47;
   /* FONT */
   --font-size: 14px;
+  --font-size-xsmall: 10px;
   --font-size-small: 12px;
   --font-size-large: 18px;
   --font-weight-light: 300;

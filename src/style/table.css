@@ -1,4 +1,19 @@
 :root {
+  /* Table */
+  --table-space-default: 24px;
+  --table-space-half: calc(var(--table-space-default) / 2);
+  --table-space-third: calc(var(--table-space-default) / 3);
+  --table-border-width: 1px;
+  --table-border-color: var(--color-secondary-active);
+  --table-row-height: 20px;
+  --table-header-row-height: 30px;
+  --table-row-background-color: var(--color-white);
+  --table-flexbox-gap: 4px;
+  --table-trigger-size: 22px;
+  --table-trigger-gap: 1px;
+  --table-trigger-border-radius: 3px;
+  --table-trigger-border-width: 1px;
+  --table-trigger-border-color: transparent;
   /* Table Details */
   --table-details-gap: calc(var(--padding-default) / 2);
   --table-details-title-size: var(--font-size-large);
@@ -20,18 +35,119 @@
 /* Table */
 .table {
   border-collapse: collapse;
-  width: 100%;
+  min-width: 100%;
+  color: var(--color-primary);
 
   /* Checkbox state */
   --checkbox-size: 11px;
   --checkbox-border-radius: 2px;
+
   .checkbox__control:checked {
     --checkbox-background-color: var(--color-primary);
     --checkbox-border-color: var(--color-primary);
 
     &::after {
-      --checkbox-border-color: #fff;
+      --checkbox-border-color: var(--color-white);
     }
+  }
+
+  tr {
+    border-bottom: var(--table-border-width) solid var(--table-border-color);
+    background-color: var(--table-row-background-color);
+    transition: background-color var(--transition-duration) ease;
+
+    &:not(:first-child):hover,
+    &:not(:first-child).is-active {
+      --table-row-background-color: var(--color-secondary-passive);
+    }
+  }
+
+  th,
+  td {
+    box-sizing: border-box;
+    text-align: left;
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      text-align: center;
+    }
+
+    &:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)) {
+      padding-left: var(--table-space-default);
+    }
+    &:last-child {
+      padding-right: var(--table-space-default);
+    }
+
+    &:nth-child(1) {
+      width: var(--table-space-default);
+      font-weight: var(--font-weight-medium);
+    }
+
+    &:nth-child(2) {
+      width: 30px;
+      padding: 0 var(--table-space-third);
+      text-align: center;
+    }
+
+    &:nth-child(3):not(th),
+    &:nth-child(8):not(th) {
+      --table-border-color: var(--color-primary);
+      border-right: var(--table-border-width) solid var(--table-border-color);
+    }
+  }
+
+  th {
+    height: var(--table-header-row-height);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-xsmall);
+  }
+
+  td {
+    height: var(--table-row-height);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-xsmall);
+  }
+}
+
+.table__flexbox {
+  display: flex;
+  align-items: center;
+  gap: var(--table-flexbox-gap);
+
+  &.no-gap {
+    gap: 0;
+  }
+}
+
+.table__link {
+  display: inline-block;
+  padding: 0 var(--table-space-half);
+  color: var(--color-primary);
+  text-decoration: underline;
+  border-left: 1px solid var(--color-primary);
+}
+
+.table__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--table-trigger-size);
+  height: var(--table-trigger-size);
+  padding: var(--table-trigger-gap);
+  border-radius: var(--table-trigger-border-radius);
+  border: var(--table-trigger-border-width) solid
+    var(--table-trigger-border-color);
+
+  &:hover {
+    --table-trigger-border-color: var(--color-secondary-passive);
+  }
+
+  & img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
   }
 }
 
@@ -97,5 +213,6 @@
 .table-updates-control__label {
   display: inline-flex;
   flex-direction: row-reverse;
+  align-items: center;
   gap: calc(var(--padding-default) / 2.5);
 }

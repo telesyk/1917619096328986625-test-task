@@ -3,8 +3,8 @@
   --button-padding: 4px var(--padding-default);
   --button-font-size: var(--font-size);
   --button-font-weight: var(--font-weight-medium);
-  --button-color: #ffffff;
-  --button-background-color: var(--color-primary-alternative);
+  --button-color: var(--color-white);
+  --button-background-color: var(--color-primary-passive);
 }
 
 button {
@@ -30,16 +30,16 @@ button {
 
   &:hover {
     --button-color: var(--color-primary);
-    --button-background-color: var(--color-secondary-alternative);
+    --button-background-color: var(--color-secondary-passive);
   }
 }
 
 .button--action {
   --button-background-color: var(--color-action);
-  --button-color: var(--color-secondary-alternative);
+  --button-color: var(--color-secondary-passive);
 
   &:hover {
-    --button-color: var(--color-action-selected);
+    --button-color: var(--color-action-active);
     --button-background-color: var(--color-secondary);
   }
 }

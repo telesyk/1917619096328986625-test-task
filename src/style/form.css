@@ -5,10 +5,10 @@
   --checkbox-border-color: rgba(168, 168, 168, 0.5);
   --checkbox-border-width: 1px;
   --checkbox-transitioon-speed: var(--transition-duration);
-  --checkbox-background-color: #ffffff;
+  --checkbox-background-color: var(--color-white);
   --checkbox-control-opacity: 0;
   /* Search */
-  --search-wrapper-background-color: #ffffff;
+  --search-wrapper-background-color: var(--color-white);
   --search-wrapper-border-radius: 5px;
   --search-wrapper-border-color: var(--color-primary);
   --search-wrapper-border-width: 1px;
@@ -97,8 +97,8 @@
     border-color var(--search-transition-speed) ease;
 
   &.is-focused {
-    --search-wrapper-border-color: var(--color-action-selected);
-    --search-wrapper-shadow: 0 0 0 1px var(--color-action-selected);
+    --search-wrapper-border-color: var(--color-action-active);
+    --search-wrapper-shadow: 0 0 0 1px var(--color-action-active);
   }
 }
 
