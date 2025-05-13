@@ -21,6 +21,18 @@
 .table {
   border-collapse: collapse;
   width: 100%;
+
+  /* Checkbox state */
+  --checkbox-size: 11px;
+  --checkbox-border-radius: 2px;
+  .checkbox__control:checked {
+    --checkbox-background-color: var(--color-primary);
+    --checkbox-border-color: var(--color-primary);
+
+    &::after {
+      --checkbox-border-color: #fff;
+    }
+  }
 }
 
 /* Table Details */
@@ -52,11 +64,8 @@
 
 .table-details__content {
   display: flex;
-  margin: 22px 0 var(--table-details-content-gap-y);
+  margin: 22px 0 0;
   gap: var(--table-details-content-gap);
-}
-
-.table-details__content-item {
 }
 
 .table-details__content-title {

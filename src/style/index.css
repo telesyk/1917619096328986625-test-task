@@ -28,5 +28,6 @@
   /* VALUES */
   --padding-default: 20px;
   --page-width-max: 1920px;
+  --transition-duration: 0.2s;
   /* SCROLLBAR */
 }

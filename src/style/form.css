@@ -1,20 +1,32 @@
 :root {
   /* Checkbox */
-  --checkbox-size: 16px;
+  --checkbox-size: 14px;
   --checkbox-border-radius: 4px;
   --checkbox-border-color: rgba(168, 168, 168, 0.5);
   --checkbox-border-width: 1px;
-  --checkbox-transitioon-speed: 0.2s;
+  --checkbox-transitioon-speed: var(--transition-duration);
   --checkbox-background-color: #ffffff;
   --checkbox-control-opacity: 0;
+  /* Search */
+  --search-wrapper-background-color: #ffffff;
+  --search-wrapper-border-radius: 5px;
+  --search-wrapper-border-color: var(--color-primary);
+  --search-wrapper-border-width: 1px;
+  --search-wrapper-shadow: 0 0 0 transparent;
+  --search-wrapper-gap: calc(var(--padding-default) * 0.75);
+  --search-control-gap: 4px;
+  --search-transition-speed: var(--transition-duration);
+  --search-icon-color: var(--color-primary);
+  --search-icon-size: 24px;
 }
 
 .checkbox__control {
   position: relative;
   display: inline-block;
-  border: var(--checkbox-border-width) solid var(--checkbox-border-color);
   background-color: transparent;
   cursor: pointer;
+  width: calc(var(--checkbox-size) * 0.75);
+  height: calc(var(--checkbox-size) * 0.75);
 
   &::before {
     content: '';
@@ -41,8 +53,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: calc(var(--checkbox-size) / 1.65);
-    height: calc(var(--checkbox-size) / 3);
+    width: calc(var(--checkbox-size) * 0.65);
+    height: calc(var(--checkbox-size) * 0.3);
     border-radius: 1px;
     border-bottom: var(--checkbox-border-width) solid
       var(--checkbox-border-color);
@@ -64,5 +76,69 @@
   }
 }
 
-.checkbox__label {
+.search {
+  display: flex;
+  align-items: center;
+  gap: var(--search-wrapper-gap);
+  padding: calc(var(--search-wrapper-gap) * 0.25) 0;
+}
+
+.search__wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: var(--search-wrapper-border-radius);
+  border: var(--search-wrapper-border-width) solid
+    var(--search-wrapper-border-color);
+  background-color: var(--search-wrapper-background-color);
+  box-shadow: var(--search-wrapper-shadow);
+  overflow: hidden;
+  transition:
+    box-shadow var(--search-transition-speed) ease,
+    border-color var(--search-transition-speed) ease;
+
+  &.is-focused {
+    --search-wrapper-border-color: var(--color-action-selected);
+    --search-wrapper-shadow: 0 0 0 1px var(--color-action-selected);
+  }
+}
+
+.search__control {
+  padding: calc(var(--search-control-gap) * 0.75) var(--search-control-gap);
+  line-height: 1.5;
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.search__button {
+  position: relative;
+  height: var(--search-icon-size);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--search-wrapper-gap) * 0.5)
+    calc(var(--search-wrapper-gap) * 0.75);
+  background-color: transparent;
+  transition: background-color var(--search-transition-speed) ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 65%;
+    background-color: var(--search-icon-color);
+    right: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+
+  img {
+    width: calc(var(--search-icon-size) * 0.75);
+    height: calc(var(--search-icon-size) * 0.75);
+  }
 }

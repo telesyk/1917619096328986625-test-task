@@ -1,9 +1,53 @@
 :root {
+  /* Tabs Panel */
+  --tabs-panel-height: 40px;
+  /* Tabs Navigation */
+  --tabs-navigation-gap: 11px;
+  --tabs-navigation-item-background-color: transparent;
+  --tabs-navigation-item-color: var(--color-primary);
+  --tabs-navigation-item-text-shadow: 0 0 0 transparent;
 }
 
 .tabs {
 }
 
+/* Tabs Panel */
+.tabs__panel {
+  display: flex;
+  justify-content: space-between;
+  height: var(--tabs-panel-height);
+  margin: var(--padding-default) 0 14px;
+}
+
+/* Tabs Navigation */
+.tabs__navigation {
+  display: flex;
+  margin-left: calc(var(--padding-default) / 2 * -1);
+}
+
+.tabs__navigation-item {
+  padding: calc(var(--tabs-navigation-gap) * 0.75) var(--tabs-navigation-gap);
+  background-color: var(--tabs-navigation-item-background-color);
+  color: var(--tabs-navigation-item-color);
+  text-shadow: var(--tabs-navigation-item-text-shadow);
+  transition:
+    background-color var(--transition-duration) ease,
+    text-shadow var(--transition-duration) ease,
+    color var(--transition-duration) ease;
+
+  &:hover {
+    --tabs-navigation-item-text-shadow: 0 0 0.5px
+      var(--tabs-navigation-item-color);
+  }
+
+  &.is-active {
+    --tabs-navigation-item-background-color: var(--color-secondary);
+    --tabs-navigation-item-text-shadow: 0 0 0.5px
+      var(--tabs-navigation-item-color);
+  }
+}
+
+/* Tabs Content */
 .tabs__content {
   margin: 0 calc(var(--padding-default) * -1);
 }

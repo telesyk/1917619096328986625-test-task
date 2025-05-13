@@ -86,26 +86,29 @@
           <div class="tabs__panel" role="tabpanel">
             <!-- TABS NAV PANEL -->
             <nav class="tabs__navigation" role="tablist">
-              <button class="tabs__navigation-item" role="tab" data-tab-control="tab1">Text</button>
-              <button class="tabs__navigation-item" role="tab" data-tab-control="tab2">Text</button>
-              <button class="tabs__navigation-item" role="tab" data-tab-control="tab3">Text</button>
-              <button class="tabs__navigation-item" role="tab" data-tab-control="tab4">Text</button>
-              <button class="tabs__navigation-item" role="tab" data-tab-control="tab5">Text</button>
-              <button class="tabs__navigation-item" role="tab" data-tab-control="tab6">Text</button>
-              <button class="tabs__navigation-item" role="tab" data-tab-control="tab7">Text</button>
-              <button class="tabs__navigation-item" role="tab" data-tab-control="tab8">Text</button>
+              <button class="tabs__navigation-item is-active" role="tab" data-tab-control="tab1">Portfolio
+                Summary</button>
+              <button class="tabs__navigation-item" role="tab" data-tab-control="tab2">DXCDA Price</button>
+              <button class="tabs__navigation-item" role="tab" data-tab-control="tab3">DXCDA Price Results</button>
+              <button class="tabs__navigation-item" role="tab" data-tab-control="tab4">DXMark Price</button>
+              <button class="tabs__navigation-item" role="tab" data-tab-control="tab5">DXMark Price Results</button>
+              <button class="tabs__navigation-item" role="tab" data-tab-control="tab6">DXMark Individual Loan
+                Overrides</button>
+              <button class="tabs__navigation-item" role="tab" data-tab-control="tab7">Schedule</button>
+              <button class="tabs__navigation-item" role="tab" data-tab-control="tab8">Portfolio Dashboard</button>
             </nav>
             <!-- END TABS NAV PANEL -->
             <!-- TABS SEARCH -->
-            <div class="tabs__search">
-              <label for="tabsSearch" class="tabs__search-label">
-                <button class="tabs__search-button">
+            <div class="tabs__search search">
+              <span class="search__label">Asset Reference:</span>
+              <label for="tabsSearch" class="search__wrapper" role="searchbox">
+                <button class="search__button">
                   <span class="visually-hidden" hidden>Search</span>
                   <img
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACNUlEQVR4nO2YzWoUQRDHfxlwyNlEMB51j+IHJu9gfAejuQhBkaCvIHhKvOlJDwFx4wP4ddBNvOailxziNSroQQ+CutFIQQ0URdBNtmtmR/oHzTLL9r+qe6qqqxcymUymzUwAl4DHwAawDfzQT3leBeb0dyNFR53bAXYHGH2gq/MapQSWgZ8DOu6HzFtSndo5Aqw7h34BL4FF4Bwwpc5N6bN8/0p/Z+etAZN1O//OOfEEODXg/NPAMzd/q65FHNJdtPF8/YBaV1z4va4jnJZdDM8OqTerm1BpSk6EcVzLYmVsIZHuNbcpHYJYdTGfkudGW0pscibMq5YqcjaxvhSAqjrtRCT0ZbNDUiojWDM2LkaGj9TzCG4YG2IvKRtGXA6lCGaMjc3U4u+N+FFiOGZsfE0tbstn1GFTunKalG0jLr1N9Bv4GJkD08TnwJs2VqGbxsbD1OJzRlyauQh6xsZ89EksLXFKpDT/Ngkckmdds0NPE2u/MNorBNFx/fvVRLqL7n5xkkCWnLELQ+qdd/eBWwRTuqarr/38QXfeOv8JGKemO/GWu9NKP39mHwlrY96O+0BBDUy6N1FVp552lTN6spb6Oa11vmeqTTU+N7WIUnPC9kn7GX2N+XF1ereJRQgngEcunv/1h9aKqzbibKOLEA7rTaqr/fwXDasPwFttD+b/ckgVo7CIYRkD7rpFPGjjIu7lRYwAY//Dmyj2SOw7tIzCLeIbLaTQnf8O3G7amUwmk2FP/gDxZx8kD3+mqwAAAABJRU5ErkJggg=="
                     alt="search--v1">
                 </button>
-                <input type="search" id="tabsSearch" class="tabs__search-control" placeholder="Search..." />
+                <input type="search" name="tabsSearch" class="search__control" />
               </label>
             </div>
             <!-- END TABS SEARCH -->
@@ -115,7 +118,7 @@
           <div class="tabs__content" data-tabs-content>
             <div class="tab-item is-active" data-tab="tab1">
               <!-- TABLES -->
-              <table>
+              <table class="table">
                 <thead>
                   <tr>
                     <td>Text</td>
@@ -136,21 +139,33 @@
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td>text</td>
+                    <td>
+                      <label for="checkbox1" class="table-updates-control__label checkbox">
+                        <input type="checkbox" name="checkbox1" checked class="checkbox__control">
+                      </label>
+                    </td>
                     <td>text</td>
                     <td>text</td>
                     <td>text</td>
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>text</td>
+                    <td>
+                      <label for="checkbox2" class="table-updates-control__label checkbox">
+                        <input type="checkbox" name="checkbox2" class="checkbox__control">
+                      </label>
+                    </td>
                     <td>text</td>
                     <td>text</td>
                     <td>text</td>
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td>text</td>
+                    <td>
+                      <label for="checkbox3" class="table-updates-control__label checkbox">
+                        <input type="checkbox" name="checkbox3" class="checkbox__control">
+                      </label>
+                    </td>
                     <td>text</td>
                     <td>text</td>
                     <td>text</td>
@@ -175,25 +190,25 @@
           <div class="table-updates-control__list">
             <div class="table-updates-control__item">
               <label for="checkbox1" class="table-updates-control__label checkbox">
-                <input type="checkbox" checked id="checkbox1" class="checkbox__control">
+                <input type="checkbox" checked name="checkbox1" class="checkbox__control">
                 <span class="checkbox__label">Batch All</span>
               </label>
             </div>
             <div class="table-updates-control__item">
               <label for="checkbox2" class="table-updates-control__label checkbox">
-                <input type="checkbox" id="checkbox2" class="checkbox__control">
+                <input type="checkbox" name="checkbox2" class="checkbox__control">
                 <span class="checkbox__label">Report All</span>
               </label>
             </div>
             <div class="table-updates-control__item">
               <label for="checkbox3" class="table-updates-control__label checkbox">
-                <input type="checkbox" id="checkbox3" class="checkbox__control">
+                <input type="checkbox" name="checkbox3" class="checkbox__control">
                 <span class="checkbox__label">Update All</span>
               </label>
             </div>
             <div class="table-updates-control__item">
               <label for="checkbox4" class="table-updates-control__label checkbox">
-                <input type="checkbox" id="checkbox4" class="checkbox__control">
+                <input type="checkbox" name="checkbox4" class="checkbox__control">
                 <span class="checkbox__label">Enable Update</span>
               </label>
             </div>
