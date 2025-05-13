@@ -108,7 +108,7 @@
                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACNUlEQVR4nO2YzWoUQRDHfxlwyNlEMB51j+IHJu9gfAejuQhBkaCvIHhKvOlJDwFx4wP4ddBNvOailxziNSroQQ+CutFIQQ0URdBNtmtmR/oHzTLL9r+qe6qqqxcymUymzUwAl4DHwAawDfzQT3leBeb0dyNFR53bAXYHGH2gq/MapQSWgZ8DOu6HzFtSndo5Aqw7h34BL4FF4Bwwpc5N6bN8/0p/Z+etAZN1O//OOfEEODXg/NPAMzd/q65FHNJdtPF8/YBaV1z4va4jnJZdDM8OqTerm1BpSk6EcVzLYmVsIZHuNbcpHYJYdTGfkudGW0pscibMq5YqcjaxvhSAqjrtRCT0ZbNDUiojWDM2LkaGj9TzCG4YG2IvKRtGXA6lCGaMjc3U4u+N+FFiOGZsfE0tbstn1GFTunKalG0jLr1N9Bv4GJkD08TnwJs2VqGbxsbD1OJzRlyauQh6xsZ89EksLXFKpDT/Ngkckmdds0NPE2u/MNorBNFx/fvVRLqL7n5xkkCWnLELQ+qdd/eBWwRTuqarr/38QXfeOv8JGKemO/GWu9NKP39mHwlrY96O+0BBDUy6N1FVp552lTN6spb6Oa11vmeqTTU+N7WIUnPC9kn7GX2N+XF1ereJRQgngEcunv/1h9aKqzbibKOLEA7rTaqr/fwXDasPwFttD+b/ckgVo7CIYRkD7rpFPGjjIu7lRYwAY//Dmyj2SOw7tIzCLeIbLaTQnf8O3G7amUwmk2FP/gDxZx8kD3+mqwAAAABJRU5ErkJggg=="
                     alt="search--v1">
                 </button>
-                <input type="search" name="tabsSearch" class="search__control" />
+                <input type="search" id="tabsSearch" class="search__control" />
               </label>
             </div>
             <!-- END TABS SEARCH -->
@@ -227,6 +227,22 @@
                   <th>
                     <span>City</span>
                   </th>
+                  <!-- COLUMN STATE -->
+                  <th>
+                    <span>State</span>
+                  </th>
+                  <!-- COLUMN POSTAL CODE -->
+                  <th>
+                    <span>Postal Code</span>
+                  </th>
+                  <!-- COLUMN COUNTRY -->
+                  <th>
+                    <span>Country</span>
+                  </th>
+                  <!-- COLUMN REGION -->
+                  <th>
+                    <span>Region</span>
+                  </th>
                 </tr>
                 <!-- END TABLE HEADING -->
                 <!-- TABLE BODY -->
@@ -235,8 +251,8 @@
                   <td>1</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input checked type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-1" class="table-updates-control__label checkbox">
+                      <input checked type="checkbox" id="t-checkbox1-1" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -264,14 +280,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>2</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-2" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-2" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -299,14 +323,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>3</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-3" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-3" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -334,14 +366,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>4</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-4" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-4" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -369,14 +409,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>5</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-5" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-5" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -404,14 +452,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>6</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-6" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-6" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -439,14 +495,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>7</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-7" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-7" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -474,14 +538,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>8</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-8" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-8" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -509,14 +581,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>9</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-9" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-9" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -544,14 +624,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>10</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-10" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-10" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -579,14 +667,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>11</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-11" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-11" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -614,14 +710,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>12</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-12" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-12" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -649,14 +753,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>13</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-13" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-13" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -684,14 +796,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>14</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-14" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-14" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -719,14 +839,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>15</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-15" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-15" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -754,14 +882,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>16</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-16" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-16" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -789,14 +925,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>17</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-17" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-17" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -824,14 +968,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>18</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-18" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-18" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -859,14 +1011,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>19</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-19" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-19" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -894,14 +1054,22 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <tr>
                   <!-- COLUMN ORDER -->
                   <td>20</td>
                   <!-- COLUMN BUTCH -->
                   <td>
-                    <label for="checkbox1" class="table-updates-control__label checkbox">
-                      <input type="checkbox" name="checkbox1" class="checkbox__control">
+                    <label for="t-checkbox1-20" class="table-updates-control__label checkbox">
+                      <input type="checkbox" id="t-checkbox1-20" class="checkbox__control">
                     </label>
                   </td>
                   <!-- COLUMN REPORT -->
@@ -929,6 +1097,14 @@
                   <td>08/31/2023</td>
                   <!-- COLUMN CITY -->
                   <td>SAN FERNANDO</td>
+                  <!-- COLUMN STATE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN POSTAL CODE -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN COUNTRY -->
+                  <td>&nbsp;</td>
+                  <!-- COLUMN REGION -->
+                  <td>&nbsp;</td>
                 </tr>
                 <!-- END TABLE BODY -->
               </table>
@@ -950,25 +1126,25 @@
           <div class="table-updates-control__list">
             <div class="table-updates-control__item">
               <label for="checkbox1" class="table-updates-control__label checkbox">
-                <input type="checkbox" checked name="checkbox1" class="checkbox__control">
+                <input type="checkbox" checked id="checkbox1" class="checkbox__control">
                 <span class="checkbox__label">Batch All</span>
               </label>
             </div>
             <div class="table-updates-control__item">
               <label for="checkbox2" class="table-updates-control__label checkbox">
-                <input type="checkbox" name="checkbox2" class="checkbox__control">
+                <input type="checkbox" id="checkbox2" class="checkbox__control">
                 <span class="checkbox__label">Report All</span>
               </label>
             </div>
             <div class="table-updates-control__item">
               <label for="checkbox3" class="table-updates-control__label checkbox">
-                <input type="checkbox" name="checkbox3" class="checkbox__control">
+                <input type="checkbox" id="checkbox3" class="checkbox__control">
                 <span class="checkbox__label">Update All</span>
               </label>
             </div>
             <div class="table-updates-control__item">
               <label for="checkbox4" class="table-updates-control__label checkbox">
-                <input type="checkbox" name="checkbox4" class="checkbox__control">
+                <input type="checkbox" id="checkbox4" class="checkbox__control">
                 <span class="checkbox__label">Enable Update</span>
               </label>
             </div>
