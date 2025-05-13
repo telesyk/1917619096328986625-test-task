@@ -1,6 +1,68 @@
-.checkbox {
+:root {
+  /* Checkbox */
+  --checkbox-size: 16px;
+  --checkbox-border-radius: 4px;
+  --checkbox-border-color: rgba(168, 168, 168, 0.5);
+  --checkbox-border-width: 1px;
+  --checkbox-transitioon-speed: 0.2s;
+  --checkbox-background-color: #ffffff;
+  --checkbox-control-opacity: 0;
 }
-.checkbox:checked {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
+
+.checkbox__control {
+  position: relative;
+  display: inline-block;
+  border: var(--checkbox-border-width) solid var(--checkbox-border-color);
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--checkbox-size);
+    height: var(--checkbox-size);
+    background-color: var(--checkbox-background-color);
+    border-radius: var(--checkbox-border-radius);
+    border: var(--checkbox-border-width) solid var(--checkbox-border-color);
+    transform: translate(-50%, -50%);
+    transition:
+      transform var(--checkbox-transitioon-speed) ease,
+      background-color var(--checkbox-transitioon-speed) ease;
+  }
+
+  &::after {
+    --checkbox-border-width: 2px;
+    --checkbox-border-color: var(--color-primary);
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(var(--checkbox-size) / 1.65);
+    height: calc(var(--checkbox-size) / 3);
+    border-radius: 1px;
+    border-bottom: var(--checkbox-border-width) solid
+      var(--checkbox-border-color);
+    border-left: var(--checkbox-border-width) solid var(--checkbox-border-color);
+    opacity: var(--checkbox-control-opacity);
+    transform: translate(-50%, -70%) rotate(-45deg);
+    transition:
+      transform var(--checkbox-transitioon-speed) ease,
+      opacity var(--checkbox-transitioon-speed) ease,
+      background-color var(--checkbox-transitioon-speed) ease;
+  }
+
+  &:hover {
+    --checkbox-control-opacity: 0.15;
+  }
+
+  &:checked {
+    --checkbox-control-opacity: 1;
+  }
+}
+
+.checkbox__label {
 }

@@ -74,8 +74,19 @@
 }
 
 /* Table Updates Control */
-.tabel-updates-control {
+.table-updates-control {
   display: flex;
   align-items: center;
-  gap: 5px;
+  justify-content: space-between;
+}
+
+.table-updates-control__list {
+  display: flex;
+  gap: var(--table-details-content-gap);
+}
+
+.table-updates-control__label {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  gap: calc(var(--padding-default) / 2.5);
 }
