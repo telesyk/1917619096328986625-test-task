@@ -1,0 +1,6 @@
+.checkbox {
+}
+.checkbox:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}

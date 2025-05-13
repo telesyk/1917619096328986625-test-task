@@ -1,0 +1,9 @@
+:root {
+}
+
+.tabs {
+}
+
+.tabs__content {
+  margin: 0 calc(var(--padding-default) * -1);
+}

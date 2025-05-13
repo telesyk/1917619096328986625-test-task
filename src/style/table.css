@@ -26,7 +26,7 @@
 /* Table Details */
 .table-details {
   margin: var(--table-details-gap) 0 0;
-  padding: 0 var(--padding-default) 0 126px;
+  padding: 0 0 0 106px;
 }
 
 .table-details__header {

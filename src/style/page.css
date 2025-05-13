@@ -1,0 +1,48 @@
+:root {
+  --header-width: var(--page-width-max);
+  --header-height: 44px;
+  --header-title-width: 100px;
+}
+
+/* Header */
+.page-header__container {
+  display: flex;
+  align-items: center;
+  max-width: var(--header-width);
+  height: var(--header-height);
+  padding: 0 var(--padding-default);
+  margin: 0 auto;
+}
+
+.page-header__title,
+.page-header__navigation,
+.page-header__details {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__title {
+  min-width: var(--header-title-width);
+  flex-basis: var(--header-title-width);
+}
+
+.page-header__details {
+  justify-content: flex-end;
+  gap: 5px;
+  flex: 1 0 auto;
+}
+
+.page-header__navigation {
+  flex: 2 1 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Main */
+.page-main__container {
+  padding: 0 var(--padding-default);
+  margin: 0 auto;
+}
+
+/* Footer */
