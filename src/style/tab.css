@@ -10,6 +10,8 @@
   --tabs-navigation-item-text-shadow: 0 0 0 transparent;
   /* Tab */
   --tab-state: none;
+  /* Scroll */
+  --scroll-gap: 4px;
 }
 
 /* Tabs Nav Panel */
@@ -52,11 +54,28 @@
 /* Tab */
 .tab {
   margin: 0 calc(var(--padding-default) * -1);
-  overflow: auto;
-  /* by default tab hidden */
   display: var(--tab-state);
+  /* scroll */
+  overflow: auto;
+  scrollbar-gutter: stable;
 
   &.is-active {
     --tab-state: block;
   }
 }
+
+/* Scroll "tricks" */
+/* .tab::-webkit-scrollbar {
+  height: 10px;
+}
+.tab::-webkit-scrollbar-track {
+  background: transparent;
+  border-block-start: 1px solid var(--color-secondary);
+  border-block-end: 1px solid var(--color-secondary);
+}
+.tab::-webkit-scrollbar-thumb {
+  background: var(--color-primary-passive);
+}
+.tab::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary-active);
+} */

@@ -35,7 +35,7 @@
 /* Table */
 .table {
   border-collapse: collapse;
-  min-width: 100%;
+  /* min-width: 100%; */
   color: var(--color-primary);
 
   /* Checkbox state */
