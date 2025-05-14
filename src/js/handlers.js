@@ -39,6 +39,5 @@ export const handleTabSwitch = target => {
   target.setAttribute('tabindex', '0')
   target.classList.add('is-active')
   target.setAttribute('aria-selected', 'true')
-  // console.log(nextTabId, 'handleTabSwitch')
   nextTab.classList.add('is-active')
 }
